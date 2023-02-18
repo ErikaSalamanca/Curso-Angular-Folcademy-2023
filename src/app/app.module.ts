@@ -1,31 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SortableModule } from 'ngx-bootstrap/sortable';
-import { TabsModule } from 'ngx-bootstrap/tabs';
-import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
-import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { AppRoutingModule } from './app-routing.module';
+import { CardsComponent } from './shared/cards/cards.component';
+import { LayoutModule } from './layout/layout.module';
+import { SharedModule } from './shared/shared.module';
+import { RouterModule } from '@angular/router';
+import { RoutesModule } from './routes/routes.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-   
     
-    
-  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SortableModule.forRoot(),
-    TabsModule.forRoot(),
-    TypeaheadModule.forRoot(),
-    CollapseModule.forRoot()
+    LayoutModule,
+    // SharedModule
+    RouterModule,
+    RoutesModule
+    
   ],
+
+  
   providers: [],
   bootstrap: [AppComponent]
 })

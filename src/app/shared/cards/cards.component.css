@@ -1,7 +1,10 @@
-#Todos{
+#card {
     display: flex;
     flex-wrap: wrap;
-    border-radius: 5px;
     justify-content: space-between;
-    padding: 20px;
+    border-radius: 5px;
+    gap: 20px;
+    text-align: center;
+    background-color: rgb(200, 200, 224);
+
 }

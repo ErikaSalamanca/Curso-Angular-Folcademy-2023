@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { TabsetComponent } from 'ngx-bootstrap/tabs';
 
+
 @Component({
   selector: 'app-root', 
   templateUrl: './app.component.html',
@@ -9,6 +10,7 @@ import { TabsetComponent } from 'ngx-bootstrap/tabs';
 })
 export class AppComponent {
   @ViewChild('staticTabs', { static: false }) staticTabs?: TabsetComponent;
+  currentRate = 0;
 
   selectTab(tabId: number) {
     if (this.staticTabs?.tabs[tabId]) {
@@ -28,3 +30,4 @@ export class AppComponent {
 
 
 }
+

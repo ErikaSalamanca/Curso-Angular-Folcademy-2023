@@ -1,20 +1,14 @@
 
-header{
-    height: 60px;
-    
+*{
+    background-color: rgb(31, 31, 75);
+    padding: 5px;
 }
+
+
 
 #logo{
     height: 60px;
 } 
-
-#navbar{
-    list-style: none;
-
-}
-
-button:hover{background-color: rgb(38, 34, 95);}
-button:hover{color: black;}
 
 button{
     border-radius: 5px;
@@ -23,18 +17,6 @@ button{
     margin-left: 5px;
 }
 
-#hero{
-    height: 300px;
-    display: flex;
-    text-align: justify;
-    align-items: center;
-    font-style:oblique;
-    font-weight: 800;
-    color: white;
-    
-}
-
-
-p{
-    font-size: 20px;
+a{
+    color: rgb(180, 175, 175);
 }

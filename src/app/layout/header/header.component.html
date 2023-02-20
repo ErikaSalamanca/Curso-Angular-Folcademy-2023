@@ -6,29 +6,10 @@
         </div>
       
         <nav class="nav nav-borders">
-          <a routerLink="/inicio" class="nav-link active">Inicio</a>
-          <a routerLink="/peliculas" class="nav-link" >Películas</a>
-          <a class="nav-link" >Series</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#!">
-                <div class="dropdown-item-icon">
-                    <i data-feather="user"></i>
-                </div>
-                Ingresar
-            </a><a class="dropdown-item" href="#!">
-                <div class="dropdown-item-icon">
-                    <i data-feather="ini sesion"></i>
-                </div>
-                Iniciar Sesión
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#!">
-                <div class="dropdown-item-icon">
-                    <i data-feather="Registrarse"></i>
-                </div>
-                Registrarse
-            </a>
-        </div>
+          <a class="nav-link" routerLink="/inicio" routerLinkActive="active" href="#">Inicio</a>
+          <a class="nav-link" routerLink="/peliculas" routerLinkActive="active" href="peliculas">Películas</a>
+          <a class="nav-link" routerLink="/series" routerLinkActive="active" href="series">Series</a>
+          <a class="nav-link" routerLink="/ingresar" routerLinkActive="active" href="ingresar">Ingresar</a>
         </nav>
       </div>
     </nav>

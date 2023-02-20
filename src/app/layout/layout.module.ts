@@ -16,7 +16,6 @@ import { RoutesModule } from '../routes/routes.module';
   imports: [
     CommonModule,
     AppRoutingModule,
-    RouterModule,
     RoutesModule,
     
   ],

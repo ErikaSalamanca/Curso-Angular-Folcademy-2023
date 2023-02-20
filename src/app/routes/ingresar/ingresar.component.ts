@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IniciarsesionComponent } from './iniciarsesion/iniciarsesion.component';
+import { RegistrarseComponent } from './registrarse/registrarse.component';
 
 
 @Component({
@@ -6,6 +8,7 @@ import { Component } from '@angular/core';
   templateUrl: './ingresar.component.html',
   styleUrls: ['./ingresar.component.css']
 })
+
 
 
 export class IngresarComponent {

@@ -7,6 +7,8 @@ import { IngresarComponent } from './ingresar/ingresar.component';
 import { LayoutModule } from '../layout/layout.module';
 import { IniciarsesionComponent } from './ingresar/iniciarsesion/iniciarsesion.component';
 import { RegistrarseComponent } from './ingresar/registrarse/registrarse.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -15,14 +17,16 @@ import { RegistrarseComponent } from './ingresar/registrarse/registrarse.compone
     SeriesComponent,
     InicioComponent,
     IngresarComponent,
-    IniciarsesionComponent,
     RegistrarseComponent,
+    IniciarsesionComponent
+   
   
   ],
   
   imports: [
     CommonModule,
-    LayoutModule,
+    SharedModule,
+    AppRoutingModule
   ],
 
   exports: [
@@ -30,6 +34,8 @@ import { RegistrarseComponent } from './ingresar/registrarse/registrarse.compone
     SeriesComponent,
     InicioComponent,
     IngresarComponent,
+    RegistrarseComponent,
+    IniciarsesionComponent
   
   ]
 

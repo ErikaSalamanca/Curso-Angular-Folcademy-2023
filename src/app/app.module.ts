@@ -20,10 +20,9 @@ import { RoutesModule } from './routes/routes.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
-    // SharedModule
+    SharedModule,
     RouterModule,
-    RoutesModule
-    
+    RoutesModule,
   ],
 
   

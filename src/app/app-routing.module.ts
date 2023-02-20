@@ -1,14 +1,13 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PeliculasComponent } from './routes/peliculas/peliculas.component';
-import { Route } from '@angular/router';
-import { RoutesModule } from './routes/routes.module';
+import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './routes/inicio/inicio.component';
 import { SeriesComponent } from './routes/series/series.component';
 import { IngresarComponent } from './routes/ingresar/ingresar.component';
 
 
-const routes: RoutesModule =[
+const routes: Routes=[
   {
     path: 'inicio',
     component: InicioComponent
@@ -21,16 +20,16 @@ const routes: RoutesModule =[
 
   {
     path: 'series',
-    Component: SeriesComponent
+    component: SeriesComponent
   },
 
   {
     path: 'ingresar',
-    Component: IngresarComponent
+    component: IngresarComponent
   },
   {
     path: '**',
-    Component: InicioComponent
+    component: InicioComponent
   }
 
 
@@ -38,8 +37,7 @@ const routes: RoutesModule =[
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: [RouterModule.forRoot (routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

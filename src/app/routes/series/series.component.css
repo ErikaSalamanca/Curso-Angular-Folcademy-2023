@@ -1,0 +1,34 @@
+*{
+    background-color: rgb(31, 31, 75);
+    padding: 5px;
+}
+
+
+
+p{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(180, 175, 175);
+}
+
+form{
+    color: rgb(180, 175, 175);
+    
+    
+}
+
+
+.section1{
+    height: 200px;
+    color: rgb(243, 239, 239);
+    
+   
+}
+
+.text-group{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content:left;
+   
+}
+

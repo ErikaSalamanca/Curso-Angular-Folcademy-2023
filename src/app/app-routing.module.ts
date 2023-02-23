@@ -29,10 +29,7 @@ const routes: Routes=[
     path: 'ingresar',
     component: IngresarComponent
   },
-  {
-    path: '**',
-    component: InicioComponent
-  },
+  
   {
     path: 'iniciarsesion',
     component: IniciarsesionComponent
@@ -40,7 +37,11 @@ const routes: Routes=[
   {
     path: 'registrarse',
     component: RegistrarseComponent
-  }
+  },
+  {
+    path: '**',
+    component: InicioComponent
+  },
 
 
 ]

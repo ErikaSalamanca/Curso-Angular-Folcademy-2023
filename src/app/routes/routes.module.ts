@@ -4,7 +4,6 @@ import { PeliculasComponent } from './peliculas/peliculas.component';
 import { SeriesComponent } from './series/series.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { IngresarComponent } from './ingresar/ingresar.component';
-import { LayoutModule } from '../layout/layout.module';
 import { IniciarsesionComponent } from './ingresar/iniciarsesion/iniciarsesion.component';
 import { RegistrarseComponent } from './ingresar/registrarse/registrarse.component';
 import { AppRoutingModule } from '../app-routing.module';

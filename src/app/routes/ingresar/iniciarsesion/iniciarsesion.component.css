@@ -1,4 +1,32 @@
-*{
-    background-color: rgb(31, 31, 75);
-    padding: 5px;
+
+.dashboard{
+    height: 480px;
+    color: white;
+    
+    
+   
+}
+
+#cards{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    text-align: center;
+    
+ 
+        
+}
+
+
+p{
+    font-size: 20px;
+    color: black;
+   
+}
+
+h2{
+    font-size: 30px;
+    color: black;
 }

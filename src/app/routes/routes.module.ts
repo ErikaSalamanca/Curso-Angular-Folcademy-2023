@@ -8,6 +8,7 @@ import { IniciarsesionComponent } from './ingresar/iniciarsesion/iniciarsesion.c
 import { RegistrarseComponent } from './ingresar/registrarse/registrarse.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    
   ],
 
   exports: [

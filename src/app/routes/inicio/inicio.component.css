@@ -49,18 +49,14 @@ form{
 }
 
 .button-Selected{
-    background-color: aqua;
+    background-color: rgb(123, 103, 160);
 }
 
 .button-NoSelected{
-    background-color: rgb(31, 31, 75);
+    background-color: rgb(97, 82, 165);
 }
 
-.container-fluid{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+
 
 #card {
     display: flex;

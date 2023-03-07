@@ -7,6 +7,7 @@ import { SeriesComponent } from './routes/series/series.component';
 import { IngresarComponent } from './routes/ingresar/ingresar.component';
 import { IniciarsesionComponent } from './routes/ingresar/iniciarsesion/iniciarsesion.component';
 import { RegistrarseComponent } from './routes/ingresar/registrarse/registrarse.component';
+import { DetalleComponent } from './routes/detalle/detalle.component';
 
 
 const routes: Routes=[
@@ -38,6 +39,13 @@ const routes: Routes=[
     path: 'registrarse',
     component: RegistrarseComponent
   },
+
+  {
+    path: 'detalle/:media_type/:id',
+    component: DetalleComponent
+  },
+
+
   {
     path: '**',
     component: InicioComponent

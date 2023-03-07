@@ -9,7 +9,7 @@
           <span class="input-group-text">
               <i data-feather="search"></i>
           </span>
-          <input class="form-control ps-0" type="text" placeholder="Buscar..." [(ngModel)]="paraBuscar" (ngModelChange)="buscar(paraBuscar)" [ngModelOptions]="{standalone: true}" >
+          <input class="form-control ps-0" type="text" placeholder="Buscar..." name="filterpeliculas" [(ngModel)]="paraBuscar" (ngModelChange)="transform(paraBuscar)" [ngModelOptions]="{standalone: true}" [(ngModel)]="filterpeliculas">
           
         </div>
       
@@ -24,8 +24,8 @@
 
     <div class="btn-group col-sm-4 " role="group" aria-label="Basic example">
       <button type= "button" class="btn text-white" (click)="CambiarCategoria ('Todos')" [ngClass]="selected == 'Todos' ? 'button-Selected' : 'button-NoSelected'">Todos</button>
-      <button type= "button" class="btn text-white" (click)="CambiarCategoria ('Series')" [ngClass]="selected == 'Series' ? 'button-selected' : 'button-NoSelected'">Series</button>
-      <button type= "button" class="btn text-white" (click)="CambiarCategoria ('Peliculas')" [ngClass]="selected == 'Películas' ? 'button-selected' : 'button-NoSelected'">Peliculas</button>
+      <button type= "button" class="btn text-white" (click)="CambiarCategoria ('movie')" [ngClass]="selected == 'movie' ? 'button-selected' : 'button-NoSelected'">Movie</button>
+      <button type= "button" class="btn text-white" (click)="CambiarCategoria ('tv')" [ngClass]="selected == 'tv' ? 'button-selected' : 'button-NoSelected'">Tv</button>
     </div>
 
   </div>
@@ -36,14 +36,11 @@
 
 </section>
 
-  
-<section class="container-fluid" id="card"  >
-  <div class="wrapper" *ngFor="let movie of movies_series">
+<section class="wrapper" id="card"  >
+  <div class="flex-wrap" *ngFor="let movie of movies_series.results">
 
-    <div class="card" id="cards" *ngIf="selected == movie.category || selected == 'Todos'">
-      <p class="puntuacion">{{movie.rating}}</p>
-      <img src= {{movie.image}} alt="">
-      <div class="card-footer">{{movie.name}}</div>
+    <div class="card" id="cards" *ngIf="selected == movie.media_type || selected == 'Todos'">
+      <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name" [puntuacion]="movie.vote_count"></app-cards>
     </div>
   </div>
 

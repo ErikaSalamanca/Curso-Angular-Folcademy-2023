@@ -8,6 +8,7 @@ import { LayoutModule } from './layout/layout.module';
 import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { RoutesModule } from './routes/routes.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { RoutesModule } from './routes/routes.module';
     SharedModule,
     RouterModule,
     RoutesModule,
+    HttpClientModule
   ],
 
   

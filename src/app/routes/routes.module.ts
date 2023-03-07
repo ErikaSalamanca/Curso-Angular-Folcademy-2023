@@ -9,6 +9,7 @@ import { RegistrarseComponent } from './ingresar/registrarse/registrarse.compone
 import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { DetalleComponent } from './detalle/detalle.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     InicioComponent,
     IngresarComponent,
     RegistrarseComponent,
-    IniciarsesionComponent
+    IniciarsesionComponent,
+    DetalleComponent
    
   
   ],
@@ -37,7 +39,8 @@ import { FormsModule } from '@angular/forms';
     InicioComponent,
     IngresarComponent,
     RegistrarseComponent,
-    IniciarsesionComponent
+    IniciarsesionComponent,
+    DetalleComponent
   
   ]
 

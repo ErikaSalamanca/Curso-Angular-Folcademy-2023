@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardsComponent } from './cards/cards.component';
+import { RoutesModule } from '../routes/routes.module';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -9,7 +11,8 @@ import { CardsComponent } from './cards/cards.component';
     CardsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
 
   exports: [

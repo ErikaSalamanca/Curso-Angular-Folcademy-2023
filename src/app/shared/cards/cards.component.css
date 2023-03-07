@@ -5,17 +5,15 @@
 
 
 
-
 #card {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     border-radius: 5px;
     text-align: center;
     color: white;
     position: relative;
     z-index: 50;
-
+    
 }
 
 

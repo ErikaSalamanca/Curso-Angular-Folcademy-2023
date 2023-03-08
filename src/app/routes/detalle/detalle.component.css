@@ -1,0 +1,24 @@
+
+
+.container-fluid{
+    position: relative;
+    width: 1440px;
+    height: 1632px;
+    
+
+}
+
+
+
+.imagen{
+    
+    position: absolute;
+    width: 1200px;
+    height: 480px;
+    left: 120px;
+    top: 120px;
+    background: linear-gradient(180deg, rgba(54, 44, 146, 0.4) 0%, rgba(18, 98, 151, 0.4) 100%);
+    border-radius: 40px;
+       
+
+}

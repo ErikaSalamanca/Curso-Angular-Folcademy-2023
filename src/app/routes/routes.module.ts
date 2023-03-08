@@ -30,6 +30,7 @@ import { DetalleComponent } from './detalle/detalle.component';
     SharedModule,
     AppRoutingModule,
     FormsModule,
+
     
   ],
 

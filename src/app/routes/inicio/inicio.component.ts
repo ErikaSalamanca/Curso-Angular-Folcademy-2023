@@ -21,11 +21,11 @@ export class InicioComponent implements PipeTransform{
   CambiarCategoria (value:string){
     this.selected = value;
     if (value == 'tv') {
-      this.getTv;
+      this.getTv();
     } else if (value == 'movies') {
-      this.getMovies
+      this.getMovies()
     } else(
-      this.getTrendingAll
+      this.getTrendingAll()
     )
     
   }
@@ -48,8 +48,10 @@ export class InicioComponent implements PipeTransform{
     this._moviesServices.getTranding().subscribe({
       next: (data) => {
         this.movies_series = data;
+        console.log(this.movies_series)
         for (const element of this.movies_series.results) {
           element.poster_path = 'https://www.themoviedb.org/t/p/w220_and_h330_face/' + element.poster_path
+          element.backdrop_path= 'https://image.tmdb.org/t/p/w500' + element.backdrop_path
           
         }
       },
@@ -66,6 +68,7 @@ export class InicioComponent implements PipeTransform{
         this.movies_series = data;
         for (const element of this.movies_series.results) {
           element.poster_path = 'https://www.themoviedb.org/t/p/w220_and_h330_face/' + element.poster_path
+          element.backdrop_path= 'https://image.tmdb.org/t/p/w500' + element.backdrop_path
           
         }
       },
@@ -81,6 +84,7 @@ export class InicioComponent implements PipeTransform{
         this.movies_series = data;
         for (const element of this.movies_series.results) {
           element.poster_path = 'https://www.themoviedb.org/t/p/w220_and_h330_face/' + element.poster_path
+          element.backdrop_path= 'https://image.tmdb.org/t/p/w500' + element.backdrop_path
           
         }
       },

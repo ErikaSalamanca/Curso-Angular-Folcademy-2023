@@ -34,7 +34,7 @@ export class MoviesService {
 
   getMovies(): Observable<any> {
     
-    return this._http.get(this.base_url + 'movie/popular', {
+    return this._http.get(this.base_url + 'movie', {
       params:{
         api_key: this.api_Key,
         Language: 'es-Es'
@@ -45,12 +45,22 @@ export class MoviesService {
 
   getSeries(): Observable<any> {
     
-    return this._http.get(this.base_url + 'tv/popular', {
+    return this._http.get(this.base_url + 'tv', {
        params:{
         api_key: this.api_Key,
         Language: 'es-Es'
       }
     })
   }
+
+  getOneMovie(media_type:string, id:number): Observable<any> {
+    return this._http.get(this.base_url + media_type + '/' + id, {
+      params:{
+       api_key: this.api_Key,
+       Language: 'es-Es'
+     }
+   })
+  }
+
 }
 

@@ -40,7 +40,7 @@
   <div class="flex-wrap" *ngFor="let movie of movies_series.results">
 
     <div class="card" id="cards" *ngIf="selected == movie.media_type || selected == 'Todos'">
-      <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name" [puntuacion]="movie.vote_count"></app-cards>
+      <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name" [id]="movie.id" [puntuacion]="movie.vote_count" [media_type]="movie.media_type"></app-cards>
     </div>
   </div>
 

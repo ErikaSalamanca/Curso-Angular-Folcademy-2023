@@ -45,7 +45,6 @@ const routes: Routes=[
     component: DetalleComponent
   },
 
-
   {
     path: '**',
     component: InicioComponent

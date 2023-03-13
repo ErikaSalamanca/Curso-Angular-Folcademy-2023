@@ -9,13 +9,16 @@
 
 #logo{
     height: 60px;
+    cursor: pointer;
 } 
 
 button{
     border-radius: 5px;
     box-shadow: 2px 2px 10px black;
     cursor: pointer;
-    margin-left: 5px;
+    height: 20px;
+    
+    
 }
 
 a{

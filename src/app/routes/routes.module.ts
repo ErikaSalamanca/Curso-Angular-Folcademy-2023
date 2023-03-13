@@ -8,7 +8,7 @@ import { IniciarsesionComponent } from './ingresar/iniciarsesion/iniciarsesion.c
 import { RegistrarseComponent } from './ingresar/registrarse/registrarse.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetalleComponent } from './detalle/detalle.component';
 
 
@@ -30,6 +30,7 @@ import { DetalleComponent } from './detalle/detalle.component';
     SharedModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule
 
     
   ],

@@ -1,5 +1,5 @@
 .container-fluid{
-    height: 500px;
+    height: 600px;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -15,3 +15,41 @@ height: 500px;
 left: 120px;
 top: 60px;
 }
+
+button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#register{
+    display: flex;
+    justify-content: center;
+}
+
+.google-btn {
+    display: flex;
+    background: #4285F4;
+    align-items: center;
+    color: white;
+    width: 220px;
+    border-radius: 5px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    flex-direction: row;  
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;  
+    
+}
+
+span {
+    background: url(/assets/btn_google_dark_normal_ios.svg) transparent 5px 50% no-repeat;
+    display: flex;
+    width: 42px;
+    height: 42px;   
+}
+    
+
+
+

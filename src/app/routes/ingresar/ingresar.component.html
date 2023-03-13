@@ -13,21 +13,37 @@
     </div> 
 
 
-    <form>
+    <form (ngSubmit)="ingresar()" [formGroup]="loginForm" autocomplete="on">
       <div class="row mb-3">
         <label for="inputEmail3" class="col-sm-3 col-form-label">Email</label>
         <div class="col-sm-8">
-          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-        </div>
+          <input 
+          type="email" 
+          class="form-control" 
+          formControlName="correo"
+          id="inputEmail3" 
+          placeholder="Email">
+        </div> 
       </div>
+
+      <span class="form-text text-danger" *ngIf="campoEsValido('correo')">Campo Obligatorio</span>
+
+
       <div class="row mb-3">
         <label for="inputPassword3" class="col-sm-3 col-form-label">Password</label>
         <div class="col-sm-8">
-          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          <input 
+          type="password" 
+          class="form-control" 
+          formControlName="contrasena"
+          id="inputPassword3" 
+          placeholder="Password" >
         </div>
       </div>
-     
 
+      <span class="form-text text-danger" *ngIf="campoEsValido('contrasena')">Campo Obligatorio</span>
+
+     
       <div class="col-auto">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="autoSizingCheck">
@@ -38,22 +54,32 @@
         </div>
       </div>
 
-      <div class="btn bg-gradient">
-        <a class="btn text-light" routerLink="/iniciarsesion" routerLinkActive="active" href="iniciarsesion">Ingresar</a>
-      </div>
+      <button class="btn bg-gradient mb-3 mt-1 text-white" type="submit" (click)="ingresar()">Ingresar</button>
+      <hr>
+      
   
     </form>
 
+
+    <div class="google-btn">
+      <span class="icon"></span>
+      <button class="btn mb-3 mt-1" type="submit" (click)="ingresarConGoogle()">Sign In With Google</button>
+      
+    </div>
+    
+    
+    
   </div>
 
   
-  <div class=" btn col-lg-12 text-white">
-    <div class="text-center">
+
+  
+  <div class=" col-lg-12 " id="register">
+    <div class="text-white">
       <p>¿No estás registrado?</p>
-      <a class="btn bg-gradient text-white" routerLink="/registrarse" routerLinkActive="active" href="registrarse">Registrarse</a>
+      <button class="btn bg-gradient text-white" type="submit" (click)="register()">Registrarse</button>
     </div>
   </div>
-    
 
 
 </section>

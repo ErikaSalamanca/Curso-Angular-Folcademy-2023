@@ -43,7 +43,7 @@ button{
     
 }
 
-span {
+.icon {
     background: url(/assets/btn_google_dark_normal_ios.svg) transparent 5px 50% no-repeat;
     display: flex;
     width: 42px;

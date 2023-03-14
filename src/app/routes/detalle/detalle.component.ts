@@ -14,6 +14,7 @@ export class DetalleComponent {
   detalleMovie: any = ''
 
   @Input() backdrop_path: string = ''
+  @Input() title: string = ''
 
 constructor(private route: ActivatedRoute, private _moviesServices: MoviesService){}
 

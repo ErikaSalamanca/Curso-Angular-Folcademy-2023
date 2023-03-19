@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IniciarsesionComponent } from './iniciarsesion.component';
+import { AgregarSerieComponent } from './agregar-serie.component';
 
-describe('IniciarsesionComponent', () => {
-  let component: IniciarsesionComponent;
-  let fixture: ComponentFixture<IniciarsesionComponent>;
+describe('AgregarSerieComponent', () => {
+  let component: AgregarSerieComponent;
+  let fixture: ComponentFixture<AgregarSerieComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IniciarsesionComponent ]
+      declarations: [ AgregarSerieComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(IniciarsesionComponent);
+    fixture = TestBed.createComponent(AgregarSerieComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

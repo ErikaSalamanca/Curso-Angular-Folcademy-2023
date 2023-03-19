@@ -5,9 +5,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './routes/inicio/inicio.component';
 import { SeriesComponent } from './routes/series/series.component';
 import { IngresarComponent } from './routes/ingresar/ingresar.component';
-import { IniciarsesionComponent } from './routes/ingresar/iniciarsesion/iniciarsesion.component';
+import { DashboardComponent } from './routes/ingresar/dashboard/dashboard.component';
 import { RegistrarseComponent } from './routes/ingresar/registrarse/registrarse.component';
 import { DetalleComponent } from './routes/detalle/detalle.component';
+import { AgregarItemComponent } from './routes/agregar-item/agregar-item.component';
+import { AgregarSerieComponent } from './routes/agregar-serie/agregar-serie.component';
 
 
 const routes: Routes=[
@@ -31,10 +33,7 @@ const routes: Routes=[
     component: IngresarComponent
   },
   
-  {
-    path: 'iniciarsesion',
-    component: IniciarsesionComponent
-  },
+
   {
     path: 'registrarse',
     component: RegistrarseComponent
@@ -43,6 +42,20 @@ const routes: Routes=[
   {
     path: 'detalle/:media_type/:id',
     component: DetalleComponent
+  },
+
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+  {
+    path: 'agregarItem',
+    component: AgregarItemComponent
+  },
+
+  {
+    path: 'agregarserie',
+    component: AgregarSerieComponent
   },
 
   {

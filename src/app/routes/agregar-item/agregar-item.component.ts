@@ -1,0 +1,65 @@
+import { Component } from '@angular/core';
+import { FirestoreModule } from '@angular/fire/firestore';
+import { FirestoreService } from 'src/app/Services/firestore.service';
+import { MoviesService } from 'src/app/Services/movies/movies.service';
+
+@Component({
+  selector: 'app-agregar-item',
+  templateUrl: './agregar-item.component.html',
+  styleUrls: ['./agregar-item.component.css'],
+  providers: [MoviesService, FirestoreService]
+  
+})
+export class AgregarItemComponent {
+  
+  movies_series: any[] = [];
+
+  constructor(
+    private _moviesService: MoviesService,
+    private _firestoreService: FirestoreService
+  ){
+    this.getTrendingAll();
+  }
+
+  ngOnInit() : void{
+    this.getTrendingAll();
+  }
+   
+  getTrendingAll(){
+    this._moviesService.getTranding().subscribe({
+      next: (data) => {
+        console.log(data)
+        this.movies_series = data.results;
+        for (const element of this.movies_series) {
+          element.poster_path = 'https://www.themoviedb.org/t/p/w220_and_h330_face/' + element.poster_path
+          element.backdrop_path= 'https://image.tmdb.org/t/p/w500' + element.backdrop_path
+          
+        }
+      },
+      error:(error) => {
+        console.log(error);
+      }
+    })
+
+  }
+
+  addItem(newItem: number){
+    console.log('pelicula para agregar', newItem)
+    let peliculasParaAgregar = this.movies_series.find(movie=>movie.id == newItem);
+    console.log('peliculas encontrada', peliculasParaAgregar)
+    this._firestoreService.create(peliculasParaAgregar)
+  }
+  
+  obtenerPeliculasGuardadas(){
+    this._firestoreService.getAll().subscribe ({
+      next:(data) =>{
+        console.log(data)
+
+      }
+    })
+  }
+
+
+}
+
+

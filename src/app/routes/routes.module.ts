@@ -4,12 +4,14 @@ import { PeliculasComponent } from './peliculas/peliculas.component';
 import { SeriesComponent } from './series/series.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { IngresarComponent } from './ingresar/ingresar.component';
-import { IniciarsesionComponent } from './ingresar/iniciarsesion/iniciarsesion.component';
+import { DashboardComponent} from './ingresar/dashboard/dashboard.component';
 import { RegistrarseComponent } from './ingresar/registrarse/registrarse.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetalleComponent } from './detalle/detalle.component';
+import { AgregarItemComponent } from './agregar-item/agregar-item.component';
+import { AgregarSerieComponent } from './agregar-serie/agregar-serie.component';
 
 
 @NgModule({
@@ -19,8 +21,10 @@ import { DetalleComponent } from './detalle/detalle.component';
     InicioComponent,
     IngresarComponent,
     RegistrarseComponent,
-    IniciarsesionComponent,
-    DetalleComponent
+    DashboardComponent,
+    DetalleComponent,
+    AgregarItemComponent,
+    AgregarSerieComponent
    
   
   ],
@@ -30,7 +34,7 @@ import { DetalleComponent } from './detalle/detalle.component';
     SharedModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
 
     
   ],
@@ -41,7 +45,7 @@ import { DetalleComponent } from './detalle/detalle.component';
     InicioComponent,
     IngresarComponent,
     RegistrarseComponent,
-    IniciarsesionComponent,
+    DashboardComponent,
     DetalleComponent
   
   ]

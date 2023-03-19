@@ -6,6 +6,10 @@
       <p class="puntuacion">{{puntuacion}}</p>
       <img src= {{imagen}} alt="" >
       <div class="card-footer">{{nombre}}</div>
+      <div class="card-footer" *ngIf="conBoton">
+        <button class="btn btn-primary" (click)="addNewItem()">Agregar a Favoritos</button>
+
+      </div>
     </div>
   </a>
   

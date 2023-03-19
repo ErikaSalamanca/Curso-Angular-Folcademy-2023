@@ -9,7 +9,8 @@
           <a class="nav-link" routerLink="/inicio" routerLinkActive="active" href="#">Inicio</a>
           <a class="nav-link" routerLink="/peliculas" routerLinkActive="active" href="peliculas">Movie</a>
           <a class="nav-link" routerLink="/series" routerLinkActive="active" href="series">Tv</a>
-          <a class="nav-link" routerLink="/ingresar" routerLinkActive="active" href="ingresar">Ingresar</a>
+          <a class="nav-link" routerLink="/ingresar" routerLinkActive="active" href="ingresar" *ngIf="usuario == null">Ingresar</a>
+          <a class="nav-link" routerLink="/inicio" routerLinkActive="active" href="#" *ngIf="usuario != null" (click)="cerrarSesion()">Cerrar Sesión</a>
         </nav>
       </div>
     </nav>

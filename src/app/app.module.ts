@@ -12,8 +12,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AngularFireModule, FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { initializeApp } from 'firebase/app';
 import { provideFirebaseApp, getApp, } from '@angular/fire/app';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { FirestoreModule, getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+
 
 const firebaseConfig = {
   
@@ -45,7 +46,8 @@ appId: "1:884591171335:web:5e1bef829c1ac36fb957a2"
     AngularFireAuthModule,
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
     provideFirestore(() => getFirestore()),
-
+    FirestoreModule,
+    
   ],
 
   

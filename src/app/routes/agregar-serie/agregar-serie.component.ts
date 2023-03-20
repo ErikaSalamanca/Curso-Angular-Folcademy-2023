@@ -18,15 +18,15 @@ export class AgregarSerieComponent {
     private _moviesService: MoviesService,
     private _firestoreService: FirestoreService
   ){
-    this.getTv();
+    this.getTrendingAll();
   }
 
   ngOnInit() : void{
-    this.getTv();
+    this.getTrendingAll();
   }
    
-  getTv(){
-    this._moviesService.getSeries().subscribe({
+  getTrendingAll(){
+    this._moviesService.getTranding().subscribe({
       next: (data) => {
         console.log(data)
         this.movies_series = data.results;
@@ -36,23 +36,22 @@ export class AgregarSerieComponent {
           
         }
       },
-
       error:(error) => {
         console.log(error);
       }
-      
     })
+
   }
 
   addItem(newItem: number){
-    console.log('serie para agregar', newItem)
+    console.log('pelicula para agregar', newItem)
     let serieParaAgregar = this.movies_series.find(movie=>movie.id == newItem);
-    console.log('serie encontrada', serieParaAgregar)
-    this._firestoreService.createSerie(serieParaAgregar)
+    console.log('peliculas encontrada', serieParaAgregar)
+    this._firestoreService.create(serieParaAgregar)
   }
   
   obtenerSeriesGuardadas(){
-    this._firestoreService.getTv().subscribe ({
+    this._firestoreService.getAll().subscribe ({
       next:(data) =>{
         console.log(data)
 

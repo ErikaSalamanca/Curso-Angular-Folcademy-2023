@@ -37,13 +37,9 @@ export class FirestoreService {
   //   const moviesDocumentReference = doc(this.firestore, 'movies')
   // }
 
-  createSerie(tv:any){
-    return addDoc(this.moviesCollection, tv)
-  }
+  
 
-  getTv(){
-    return collectionData(this.moviesCollection) as Observable<any[]>;
-  }
+  
 
 
  

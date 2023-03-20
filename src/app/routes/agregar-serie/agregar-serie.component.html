@@ -1,18 +1,18 @@
 
 <div class="añadir">
     <h1>Añadir Elementos</h1>
-    <button (click)="obtenerSeriesGuardadas()">Obtener Peliculas</button>
+    <button (click)="obtenerSeriesGuardadas()">Obtener Series</button>
     
   </div>
   
   
   <section class="wrapper" id="card"  >
-      <div class="flex-wrap" *ngFor="let movie of movies_series">
-    
-        <div class="card" id="cards">
-          <app-cards (newItemEvent)="addItem($event)" [id]="movie.id" [conBoton]="true" [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name" [id]="movie.id" [puntuacion]="movie.vote_count" [media_type]="movie.media_type"></app-cards>
-        </div>
+    <div class="flex-wrap" *ngFor="let movie of movies_series">
+  
+      <div class="card" id="cards">
+        <app-cards (newItemEvent)="addItem($event)" [id]="movie.id" [conBoton]="true" [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name" [id]="movie.id" [puntuacion]="movie.vote_count" [media_type]="movie.media_type"></app-cards>
       </div>
+    </div>
     
   </section>
   

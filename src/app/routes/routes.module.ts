@@ -46,7 +46,9 @@ import { AgregarSerieComponent } from './agregar-serie/agregar-serie.component';
     IngresarComponent,
     RegistrarseComponent,
     DashboardComponent,
-    DetalleComponent
+    DetalleComponent,
+    AgregarItemComponent,
+    AgregarSerieComponent
   
   ]
 

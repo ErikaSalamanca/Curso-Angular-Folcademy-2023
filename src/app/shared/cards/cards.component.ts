@@ -15,6 +15,7 @@ export class CardsComponent {
   @Input() media_type: string = '';
   @Input() conBoton: boolean= false;
   @Output() newItemEvent= new EventEmitter<number>();
+  
 
 
   
@@ -24,6 +25,8 @@ export class CardsComponent {
 
   addNewItem(){
     this.newItemEvent.emit(this.id);
+
   }
+
 
 }

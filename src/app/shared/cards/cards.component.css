@@ -40,12 +40,14 @@
 }
 
 button{
-    height: 40px;
-    background-color: rgb(72, 53, 199);
-    border-radius: 10px;
-    border-color: black;
-    
-    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #7B6EF6;
+    border-style: none;
 }
 
 button:hover{

@@ -54,7 +54,7 @@ const routes: Routes=[
   },
 
   {
-    path: 'agregarserie',
+    path: 'agregarSerie',
     component: AgregarSerieComponent
   },
 
